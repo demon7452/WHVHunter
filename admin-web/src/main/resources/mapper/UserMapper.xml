@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.WhvUserMapper">
+
+    <resultMap id="result" type="com.entity.User">
+        <result property="id" column="ID"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="passportNum" column="PASSPORT_NUM"/>
+    </resultMap>
+
+    <sql id="sql_select">
+        SELECT
+        ID,
+        USER_ID,
+        PASSPORT_NUM
+        FROM
+        WHV_USER
+    </sql>
+
+    <select id="findByUserId" resultMap="result">
+        <include refid="sql_select"/>
+        WHERE USER_ID = #{userId}
+    </select>
+
+</mapper>

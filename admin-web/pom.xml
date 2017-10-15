@@ -16,10 +16,20 @@
             <artifactId>spring-boot-test-autoconfigure</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!--log jar, must need-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>lixiong</groupId>
+            <artifactId>database-api</artifactId>
         </dependency>
     </dependencies>
 
